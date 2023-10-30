@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-function Demo({count}: {
+function Demo({ count }: {
 	count: number;
 }) {
 	return (
@@ -16,16 +16,16 @@ function main() {
 		return;
 	}
 
-	let count = 0;
+	const count = 0;
 
 	const root = ReactDOM.createRoot(element);
 	const root2 = ReactDOM.createRoot(element2);
-	root.render(<App name='JOCKER'/>);
+	root.render(<App name='JOCKER' />);
 
-	setInterval(() => {
-		count += 1;
-		root2.render(<Demo count={count}/>);
-	}, 1_000);
+	// SetInterval(() => {
+	// 	count += 1;
+	// 	root2.render(<Demo count={count}/>);
+	// }, 1_000);
 }
 
 main();
